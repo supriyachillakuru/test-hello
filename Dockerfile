@@ -1,4 +1,4 @@
-FROM supriyad9/test-demo
+FROM ubuntu
 MAINTAINER "supriyachillakuru555@gmail.com"
 # RUN apt-get update && apt-get install wget -y
 RUN mkdir /usr/app
