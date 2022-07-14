@@ -1,6 +1,8 @@
-FROM ubuntu
-MAINTAINER "supriyachillakuru555@gmail.com"
-# RUN apt-get update && apt-get install wget -y
-RUN mkdir /usr/app
-WORKDIR /usr/app
-COPY gameoflife-web/target/gameoflife.war /usr/app
+
+FROM tomcat:8.0-alpine
+LABEL maintainer="supriyachillakuru555@gmail.com"
+
+ADD gameoflife-web/target/gameoflife.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
