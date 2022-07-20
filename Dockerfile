@@ -2,7 +2,7 @@
 FROM tomcat:8.0-alpine
 LABEL maintainer="supriyachillakuru555@gmail.com"
 
-ADD gameoflife-web/target/gameoflife.war /usr/local/tomcat/webapps/
+ADD target/hello-world-war-1.0.0 /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
